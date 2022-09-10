@@ -1,5 +1,5 @@
 name: adblock
-desc: adblock
+desc: 重写去广告
 
 http:
   mitm:
