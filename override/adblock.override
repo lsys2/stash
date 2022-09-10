@@ -1,14 +1,9 @@
 name: adblock
-desc: adblock
+desc: 重写去广告
 
 http:
   mitm:
-    # 京东
-    - "api.m.jd.com"
     - "bdsp-x.jd.com"
 
   rewrite:
-    # 京东去广告
-	- ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
-	
-	
+    - ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
