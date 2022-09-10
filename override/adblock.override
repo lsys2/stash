@@ -1,9 +1,17 @@
 name: adblock
-desc: 重写去广告
+desc: adblock
 
 http:
   mitm:
     - "bdsp-x.jd.com"
-
+    - "act.vip.iqiyi.com"
+    - "intl.iqiyi.com"
+    - "iface.iqiyi.com"
   rewrite:
-    - ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+	- ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
+    - ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - reject
+    - ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - reject
+    - ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - reject
+    - ^https?:\/\/intl\.iqiyi\.com\/ad_external\/ - reject
+    - ^https?:\/\/intl\.iqiyi\.com\/video\/advertise - reject
+    - ^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - reject
