@@ -1,0 +1,9 @@
+name: 去广告(严格版)
+desc: 重写去广告严格版
+
+http:
+  mitm:
+    - "bdsp-x.jd.com"
+   
+  rewrite:
+    - ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
